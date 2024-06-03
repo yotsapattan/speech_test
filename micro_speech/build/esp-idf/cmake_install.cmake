@@ -409,22 +409,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/Users/dome/esp/micro_speech/build/esp-idf/main/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__cmake_utilities/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__button/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32-camera/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp_codec_dev/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -439,11 +434,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32_s3_eye/cmake_install.cmake")
+  include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32-camera/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dome/esp/micro_speech/build/esp-idf/main/cmake_install.cmake")
+  include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp_codec_dev/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32_s3_eye/cmake_install.cmake")
 endif()
 

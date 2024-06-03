@@ -15507,7 +15507,10 @@
                                 "help": "The timeout of the watchdog, in miliseconds. Make this higher than the FreeRTOS tick rate.",
                                 "id": "ESP_INT_WDT_TIMEOUT_MS",
                                 "name": "ESP_INT_WDT_TIMEOUT_MS",
-                                "range": null,
+                                "range": [
+                                    10,
+                                    10000
+                                ],
                                 "title": "Interrupt watchdog timeout (ms)",
                                 "type": "int"
                             },
@@ -15560,7 +15563,10 @@
                                         "help": "Timeout period configuration for the Task Watchdog Timer in seconds.\nThis is also configurable at run time (see Task Watchdog Timer API Reference)",
                                         "id": "ESP_TASK_WDT_TIMEOUT_S",
                                         "name": "ESP_TASK_WDT_TIMEOUT_S",
-                                        "range": null,
+                                        "range": [
+                                            1,
+                                            60
+                                        ],
                                         "title": "Task Watchdog timeout period (seconds)",
                                         "type": "int"
                                     },
@@ -23823,688 +23829,131 @@
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Enable this option to support codec ES8311.",
-                        "id": "CODEC_ES8311_SUPPORT",
-                        "name": "CODEC_ES8311_SUPPORT",
-                        "range": null,
-                        "title": "Support ES8311 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ES7210.",
-                        "id": "CODEC_ES7210_SUPPORT",
-                        "name": "CODEC_ES7210_SUPPORT",
-                        "range": null,
-                        "title": "Support ES7210 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ES7243.",
-                        "id": "CODEC_ES7243_SUPPORT",
-                        "name": "CODEC_ES7243_SUPPORT",
-                        "range": null,
-                        "title": "Support ES7243 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ES7243E.",
-                        "id": "CODEC_ES7243E_SUPPORT",
-                        "name": "CODEC_ES7243E_SUPPORT",
-                        "range": null,
-                        "title": "Support ES7243E Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ES8156.",
-                        "id": "CODEC_ES8156_SUPPORT",
-                        "name": "CODEC_ES8156_SUPPORT",
-                        "range": null,
-                        "title": "Support ES8156 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec AW88298.",
-                        "id": "CODEC_AW88298_SUPPORT",
-                        "name": "CODEC_AW88298_SUPPORT",
-                        "range": null,
-                        "title": "Support AW88298 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ES8374.",
-                        "id": "CODEC_ES8374_SUPPORT",
-                        "name": "CODEC_ES8374_SUPPORT",
-                        "range": null,
-                        "title": "Support ES8374 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ES8388.",
-                        "id": "CODEC_ES8388_SUPPORT",
-                        "name": "CODEC_ES8388_SUPPORT",
-                        "range": null,
-                        "title": "Support ES8388 Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec TAS5805M.",
-                        "id": "CODEC_TAS5805M_SUPPORT",
-                        "name": "CODEC_TAS5805M_SUPPORT",
-                        "range": null,
-                        "title": "Support TAS5805M Codec Chip",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option to support codec ZL38063.\nZL38063 firmware only support xtensa, don't enable for RISC-V IC.",
-                        "id": "CODEC_ZL38063_SUPPORT",
-                        "name": "CODEC_ZL38063_SUPPORT",
-                        "range": null,
-                        "title": "Support ZL38063 Codec Chip",
-                        "type": "bool"
-                    }
-                ],
-                "depends_on": null,
-                "id": "component-config-audio-codec-device-configuration",
-                "title": "Audio Codec Device Configuration",
-                "type": "menu"
-            },
-            {
-                "children": [
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the OV7670.\nDisable this option to save memory.",
-                        "id": "OV7670_SUPPORT",
-                        "name": "OV7670_SUPPORT",
-                        "range": null,
-                        "title": "Support OV7670 VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the OV7725.\nDisable this option to save memory.",
-                        "id": "OV7725_SUPPORT",
-                        "name": "OV7725_SUPPORT",
-                        "range": null,
-                        "title": "Support OV7725 VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the NT99141.\nDisable this option to save memory.",
-                        "id": "NT99141_SUPPORT",
-                        "name": "NT99141_SUPPORT",
-                        "range": null,
-                        "title": "Support NT99141 HD",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the OV2640.\nDisable this option to save memory.",
-                        "id": "OV2640_SUPPORT",
-                        "name": "OV2640_SUPPORT",
-                        "range": null,
-                        "title": "Support OV2640 2MP",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the OV3360.\nDisable this option to save memory.",
-                        "id": "OV3660_SUPPORT",
-                        "name": "OV3660_SUPPORT",
-                        "range": null,
-                        "title": "Support OV3660 3MP",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the OV5640.\nDisable this option to save memory.",
-                        "id": "OV5640_SUPPORT",
-                        "name": "OV5640_SUPPORT",
-                        "range": null,
-                        "title": "Support OV5640 5MP",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the GC2145.\nDisable this option to save memory.",
-                        "id": "GC2145_SUPPORT",
-                        "name": "GC2145_SUPPORT",
-                        "range": null,
-                        "title": "Support GC2145 2MP",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the GC032A.\nDisable this option to save memory.",
-                        "id": "GC032A_SUPPORT",
-                        "name": "GC032A_SUPPORT",
-                        "range": null,
-                        "title": "Support GC032A VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the GC0308.\nDisable this option to save memory.",
-                        "id": "GC0308_SUPPORT",
-                        "name": "GC0308_SUPPORT",
-                        "range": null,
-                        "title": "Support GC0308 VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the BF3005.\nDisable this option to save memory.",
-                        "id": "BF3005_SUPPORT",
-                        "name": "BF3005_SUPPORT",
-                        "range": null,
-                        "title": "Support BF3005(BYD3005) VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the BF20A6.\nDisable this option to save memory.",
-                        "id": "BF20A6_SUPPORT",
-                        "name": "BF20A6_SUPPORT",
-                        "range": null,
-                        "title": "Support BF20A6(BYD20A6) VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice SC101_REGS_SELECT>",
-                                        "help": "Select this option means that when xclk is 20M, the frame rate is 15fps at 720p resolution.",
-                                        "id": "SC101IOT_720P_15FPS_ENABLED",
-                                        "name": "SC101IOT_720P_15FPS_ENABLED",
-                                        "range": null,
-                                        "title": "xclk20M_720p_15fps",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice SC101_REGS_SELECT>",
-                                        "help": "Select this option means that when xclk is 20M, the frame rate is 25fps at VGA resolution.",
-                                        "id": "SC101IOT_VGA_25FPS_ENABLED",
-                                        "name": "SC101IOT_VGA_25FPS_ENABLED",
-                                        "range": null,
-                                        "title": "xclk20M_VGA_25fps",
-                                        "type": "bool"
-                                    }
-                                ],
-                                "depends_on": "SC101IOT_SUPPORT",
-                                "help": "Currently SC010iot has several register sets available.\nSelect the one that matches your needs.",
-                                "id": "component-config-camera-configuration-support-sc101iot-hd-sc101iot-default-regs",
-                                "name": "SC101_REGS_SELECT",
-                                "title": "SC101iot default regs",
-                                "type": "choice"
-                            }
+                        "help": "\"Button scan interval\"",
+                        "id": "BUTTON_PERIOD_TIME_MS",
+                        "name": "BUTTON_PERIOD_TIME_MS",
+                        "range": [
+                            2,
+                            20
                         ],
-                        "depends_on": null,
-                        "help": "Enable this option if you want to use the SC101IOT.\nDisable this option to save memory.",
-                        "id": "SC101IOT_SUPPORT",
-                        "name": "SC101IOT_SUPPORT",
-                        "range": null,
-                        "title": "Support SC101IOT HD",
-                        "type": "bool"
+                        "title": "BUTTON PERIOD TIME (MS)",
+                        "type": "int"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Enable this option if you want to use the SC030IOT.\nDisable this option to save memory.",
-                        "id": "SC030IOT_SUPPORT",
-                        "name": "SC030IOT_SUPPORT",
-                        "range": null,
-                        "title": "Support SC030IOT VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "SC031GS is a global shutter CMOS sensor with high frame rate and single-frame HDR.\nEnable this option if you want to use the SC031GS.\nDisable this option to save memory.",
-                        "id": "SC031GS_SUPPORT",
-                        "name": "SC031GS_SUPPORT",
-                        "range": null,
-                        "title": "Support SC031GS VGA",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": "<choice SCCB_HARDWARE_I2C_PORT>",
-                                "help": null,
-                                "id": "SCCB_HARDWARE_I2C_PORT0",
-                                "name": "SCCB_HARDWARE_I2C_PORT0",
-                                "range": null,
-                                "title": "I2C0",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice SCCB_HARDWARE_I2C_PORT>",
-                                "help": null,
-                                "id": "SCCB_HARDWARE_I2C_PORT1",
-                                "name": "SCCB_HARDWARE_I2C_PORT1",
-                                "range": null,
-                                "title": "I2C1",
-                                "type": "bool"
-                            }
+                        "help": "\"One CONFIG_BUTTON_DEBOUNCE_TICKS equal to CONFIG_BUTTON_PERIOD_TIME_MS\"",
+                        "id": "BUTTON_DEBOUNCE_TICKS",
+                        "name": "BUTTON_DEBOUNCE_TICKS",
+                        "range": [
+                            1,
+                            7
                         ],
+                        "title": "BUTTON DEBOUNCE TICKS",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
                         "depends_on": null,
                         "help": null,
-                        "id": "component-config-camera-configuration-i2c-peripheral-to-use-for-sccb",
-                        "name": "SCCB_HARDWARE_I2C_PORT",
-                        "title": "I2C peripheral to use for SCCB",
-                        "type": "choice"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Increasing this value can reduce the initialization time of the sensor.\nPlease refer to the relevant instructions of the sensor to adjust the value.",
-                        "id": "SCCB_CLK_FREQ",
-                        "name": "SCCB_CLK_FREQ",
+                        "id": "BUTTON_SHORT_PRESS_TIME_MS",
+                        "name": "BUTTON_SHORT_PRESS_TIME_MS",
                         "range": [
-                            100000,
-                            400000
+                            50,
+                            800
                         ],
-                        "title": "SCCB clk frequency",
+                        "title": "BUTTON SHORT PRESS TIME (MS)",
                         "type": "int"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": "<choice GC_SENSOR_WINDOW_MODE>",
-                                "help": null,
-                                "id": "GC_SENSOR_WINDOWING_MODE",
-                                "name": "GC_SENSOR_WINDOWING_MODE",
-                                "range": null,
-                                "title": "Windowing Mode",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice GC_SENSOR_WINDOW_MODE>",
-                                "help": null,
-                                "id": "GC_SENSOR_SUBSAMPLE_MODE",
-                                "name": "GC_SENSOR_SUBSAMPLE_MODE",
-                                "range": null,
-                                "title": "Subsample Mode",
-                                "type": "bool"
-                            }
-                        ],
-                        "depends_on": "GC2145_SUPPORT || GC032A_SUPPORT || GC0308_SUPPORT",
-                        "help": "This option determines how to reduce the output size when the resolution you set is less than the maximum resolution.\nSUBSAMPLE_MODE has a bigger perspective and WINDOWING_MODE has a higher frame rate.",
-                        "id": "component-config-camera-configuration-galaxycore-sensor-window-mode",
-                        "name": "GC_SENSOR_WINDOW_MODE",
-                        "title": "GalaxyCore Sensor Window Mode",
-                        "type": "choice"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Camera task stack size",
-                        "id": "CAMERA_TASK_STACK_SIZE",
-                        "name": "CAMERA_TASK_STACK_SIZE",
-                        "range": null,
-                        "title": "CAM task stack size",
-                        "type": "int"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": "<choice CAMERA_TASK_PINNED_TO_CORE>",
-                                "help": null,
-                                "id": "CAMERA_CORE0",
-                                "name": "CAMERA_CORE0",
-                                "range": null,
-                                "title": "CORE0",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice CAMERA_TASK_PINNED_TO_CORE>",
-                                "help": null,
-                                "id": "CAMERA_CORE1",
-                                "name": "CAMERA_CORE1",
-                                "range": null,
-                                "title": "CORE1",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "<choice CAMERA_TASK_PINNED_TO_CORE>",
-                                "help": null,
-                                "id": "CAMERA_NO_AFFINITY",
-                                "name": "CAMERA_NO_AFFINITY",
-                                "range": null,
-                                "title": "NO_AFFINITY",
-                                "type": "bool"
-                            }
-                        ],
-                        "depends_on": null,
-                        "help": "Pin the camera handle task to a certain core(0/1). It can also be done automatically choosing NO_AFFINITY.",
-                        "id": "component-config-camera-configuration-camera-task-pinned-to-core",
-                        "name": "CAMERA_TASK_PINNED_TO_CORE",
-                        "title": "Camera task pinned to core",
-                        "type": "choice"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "Maximum value of DMA buffer\nLarger values may fail to allocate due to insufficient contiguous memory blocks, and smaller value may cause DMA interrupt to be too frequent.",
-                        "id": "CAMERA_DMA_BUFFER_SIZE_MAX",
-                        "name": "CAMERA_DMA_BUFFER_SIZE_MAX",
+                        "help": null,
+                        "id": "BUTTON_LONG_PRESS_TIME_MS",
+                        "name": "BUTTON_LONG_PRESS_TIME_MS",
                         "range": [
-                            8192,
-                            32768
+                            500,
+                            5000
                         ],
-                        "title": "DMA buffer size",
+                        "title": "BUTTON LONG PRESS TIME (MS)",
                         "type": "int"
                     },
                     {
-                        "children": [
-                            {
-                                "children": [
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice CAMERA_CONV_PROTOCOL>",
-                                        "help": null,
-                                        "id": "LCD_CAM_CONV_BT601_ENABLED",
-                                        "name": "LCD_CAM_CONV_BT601_ENABLED",
-                                        "range": null,
-                                        "title": "BT601",
-                                        "type": "bool"
-                                    },
-                                    {
-                                        "children": [],
-                                        "depends_on": "<choice CAMERA_CONV_PROTOCOL>",
-                                        "help": null,
-                                        "id": "LCD_CAM_CONV_BT709_ENABLED",
-                                        "name": "LCD_CAM_CONV_BT709_ENABLED",
-                                        "range": null,
-                                        "title": "BT709",
-                                        "type": "bool"
-                                    }
-                                ],
-                                "depends_on": "CAMERA_CONVERTER_ENABLED",
-                                "help": "Supports format conversion under both BT601 and BT709 standards.",
-                                "id": "component-config-camera-configuration-enable-camera-rgb-yuv-converter-camera-converter-protocol",
-                                "name": "CAMERA_CONV_PROTOCOL",
-                                "title": "Camera converter protocol",
-                                "type": "choice"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": "CAMERA_CONVERTER_ENABLED",
-                                "help": "Supports format conversion under both full color range mode and limited color range mode.\nIf full color range mode is selected, the color range of RGB or YUV is 0~255.\nIf limited color range mode is selected, the color range of RGB is 16~240, and the color range of YUV is Y[16~240], UV[16~235].\nFull color range mode has a wider color range, so details in the image show more clearly.\nPlease confirm the color range mode of the current camera sensor, incorrect color range mode may cause color difference in the final converted image.\nFull range mode is used by default. If this option is not selected, the format conversion function will be done using the limited range mode.",
-                                "id": "LCD_CAM_CONV_FULL_RANGE_ENABLED",
-                                "name": "LCD_CAM_CONV_FULL_RANGE_ENABLED",
-                                "range": null,
-                                "title": "Camera converter full range mode",
-                                "type": "bool"
-                            }
-                        ],
-                        "depends_on": "IDF_TARGET_ESP32S3",
-                        "help": "Enable this option if you want to use RGB565/YUV422/YUV420/YUV411 format conversion.",
-                        "id": "CAMERA_CONVERTER_ENABLED",
-                        "name": "CAMERA_CONVERTER_ENABLED",
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "BUTTON_LONG_PRESS_TOLERANCE_MS",
+                        "name": "BUTTON_LONG_PRESS_TOLERANCE_MS",
                         "range": null,
-                        "title": "Enable camera RGB/YUV converter",
+                        "title": "BUTTON LONG PRESS TOLERANCE TIME (MS)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "\"Serial trigger interval\"",
+                        "id": "BUTTON_SERIAL_TIME_MS",
+                        "name": "BUTTON_SERIAL_TIME_MS",
+                        "range": [
+                            2,
+                            1000
+                        ],
+                        "title": "BUTTON SERIAL TIME (MS)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable GPIO button power save\n\nThe function enables the use of GPIO buttons during light sleep,\nbut enabling this function prevents the simultaneous use of other\ntypes of buttons.",
+                        "id": "GPIO_BUTTON_SUPPORT_POWER_SAVE",
+                        "name": "GPIO_BUTTON_SUPPORT_POWER_SAVE",
+                        "range": null,
+                        "title": "GPIO BUTTON SUPPORT POWER SAVE",
                         "type": "bool"
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3",
-                        "help": "If this option is enabled, camera ISR will execute from IRAM.",
-                        "id": "LCD_CAM_ISR_IRAM_SAFE",
-                        "name": "LCD_CAM_ISR_IRAM_SAFE",
-                        "range": null,
-                        "title": "Execute camera ISR from IRAM",
-                        "type": "bool"
-                    }
-                ],
-                "depends_on": null,
-                "id": "component-config-camera-configuration",
-                "title": "Camera configuration",
-                "type": "menu"
-            },
-            {
-                "children": [
-                    {
-                        "children": [],
                         "depends_on": null,
-                        "help": "Error check assert the application before returning the error code.",
-                        "id": "BSP_ERROR_CHECK",
-                        "name": "BSP_ERROR_CHECK",
-                        "range": null,
-                        "title": "Enable error check in BSP",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "ESP32-S2 has two I2C peripherals, pick the one you want to use.",
-                                "id": "BSP_I2C_NUM",
-                                "name": "BSP_I2C_NUM",
-                                "range": [
-                                    0,
-                                    1
-                                ],
-                                "title": "I2C peripheral index",
-                                "type": "int"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "I2C has two speed modes: normal (100kHz) and fast (400kHz).",
-                                "id": "BSP_I2C_FAST_MODE",
-                                "name": "BSP_I2C_FAST_MODE",
-                                "range": null,
-                                "title": "Enable I2C fast mode",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": null,
-                                "id": "BSP_I2C_CLK_SPEED_HZ",
-                                "name": "BSP_I2C_CLK_SPEED_HZ",
-                                "range": null,
-                                "title": null,
-                                "type": "int"
-                            }
-                        ],
-                        "depends_on": null,
-                        "id": "component-config-board-support-package-i2c",
-                        "title": "I2C",
-                        "type": "menu"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Format SPIFFS if it fails to mount the filesystem.",
-                                "id": "BSP_SPIFFS_FORMAT_ON_MOUNT_FAIL",
-                                "name": "BSP_SPIFFS_FORMAT_ON_MOUNT_FAIL",
-                                "range": null,
-                                "title": "Format SPIFFS if mounting fails",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Mount point of SPIFFS in the Virtual File System.",
-                                "id": "BSP_SPIFFS_MOUNT_POINT",
-                                "name": "BSP_SPIFFS_MOUNT_POINT",
-                                "range": null,
-                                "title": "SPIFFS mount point",
-                                "type": "string"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Partition label which stores SPIFFS.",
-                                "id": "BSP_SPIFFS_PARTITION_LABEL",
-                                "name": "BSP_SPIFFS_PARTITION_LABEL",
-                                "range": null,
-                                "title": "Partition label of SPIFFS",
-                                "type": "string"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Supported max files for SPIFFS in the Virtual File System.",
-                                "id": "BSP_SPIFFS_MAX_FILES",
-                                "name": "BSP_SPIFFS_MAX_FILES",
-                                "range": null,
-                                "title": "Maximum files that could be open at the same time",
-                                "type": "int"
-                            }
-                        ],
-                        "depends_on": null,
-                        "id": "component-config-board-support-package-spiffs-virtual-file-system",
-                        "title": "SPIFFS - Virtual File System",
-                        "type": "menu"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "The SDMMC host will format (FAT) the uSD card if it fails to mount the filesystem.",
-                                "id": "BSP_SD_FORMAT_ON_MOUNT_FAIL",
-                                "name": "BSP_SD_FORMAT_ON_MOUNT_FAIL",
-                                "range": null,
-                                "title": "Format uSD card if mounting fails",
-                                "type": "bool"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Mount point of the uSD card in the Virtual File System",
-                                "id": "BSP_SD_MOUNT_POINT",
-                                "name": "BSP_SD_MOUNT_POINT",
-                                "range": null,
-                                "title": "uSD card mount point",
-                                "type": "string"
-                            }
-                        ],
-                        "depends_on": null,
-                        "id": "component-config-board-support-package-usd-card-virtual-file-system",
-                        "title": "uSD card - Virtual File System",
-                        "type": "menu"
-                    },
-                    {
-                        "children": [
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "The Board Support Package will create a task that will periodically handle LVGL operation in lv_timer_handler().",
-                                "id": "BSP_DISPLAY_LVGL_TASK_PRIORITY",
-                                "name": "BSP_DISPLAY_LVGL_TASK_PRIORITY",
-                                "range": null,
-                                "title": "LVGL task priority",
-                                "type": "int"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Period of LVGL tick timer.",
-                                "id": "BSP_DISPLAY_LVGL_TICK",
-                                "name": "BSP_DISPLAY_LVGL_TICK",
-                                "range": [
-                                    1,
-                                    100
-                                ],
-                                "title": "LVGL tick period",
-                                "type": "int"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "Maximum time for task sleep in ms.",
-                                "id": "BSP_DISPLAY_LVGL_MAX_SLEEP",
-                                "name": "BSP_DISPLAY_LVGL_MAX_SLEEP",
-                                "range": [
-                                    1,
-                                    500
-                                ],
-                                "title": "LVGL maximum sleep time in ms",
-                                "type": "int"
-                            },
-                            {
-                                "children": [],
-                                "depends_on": null,
-                                "help": "LEDC channel is used to generate PWM signal that controls display brightness.\nSet LEDC index that should be used.",
-                                "id": "BSP_DISPLAY_BRIGHTNESS_LEDC_CH",
-                                "name": "BSP_DISPLAY_BRIGHTNESS_LEDC_CH",
-                                "range": [
-                                    0,
-                                    7
-                                ],
-                                "title": "LEDC channel index",
-                                "type": "int"
-                            }
-                        ],
-                        "depends_on": null,
-                        "id": "component-config-board-support-package-display",
-                        "title": "Display",
-                        "type": "menu"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "ESP32S3 has two I2S peripherals, pick the one you want to use.",
-                        "id": "BSP_I2S_NUM",
-                        "name": "BSP_I2S_NUM",
+                        "help": "\"Maximum number of channels for ADC buttons\"",
+                        "id": "ADC_BUTTON_MAX_CHANNEL",
+                        "name": "ADC_BUTTON_MAX_CHANNEL",
                         "range": [
-                            0,
-                            1
+                            1,
+                            5
                         ],
-                        "title": "I2S peripheral index",
+                        "title": "ADC BUTTON MAX CHANNEL",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "\"Maximum number of buttons per channel\"",
+                        "id": "ADC_BUTTON_MAX_BUTTON_PER_CHANNEL",
+                        "name": "ADC_BUTTON_MAX_BUTTON_PER_CHANNEL",
+                        "range": [
+                            1,
+                            10
+                        ],
+                        "title": "ADC BUTTON MAX BUTTON PER CHANNEL",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "\"Number of samples per scan\"",
+                        "id": "ADC_BUTTON_SAMPLE_TIMES",
+                        "name": "ADC_BUTTON_SAMPLE_TIMES",
+                        "range": [
+                            1,
+                            4
+                        ],
+                        "title": "ADC BUTTON SAMPLE TIMES",
                         "type": "int"
                     }
                 ],
                 "depends_on": null,
-                "id": "component-config-board-support-package",
-                "title": "Board Support Package",
+                "id": "component-config-iot-button",
+                "title": "IoT Button",
                 "type": "menu"
             },
             {
@@ -27680,131 +27129,688 @@
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "\"Button scan interval\"",
-                        "id": "BUTTON_PERIOD_TIME_MS",
-                        "name": "BUTTON_PERIOD_TIME_MS",
-                        "range": [
-                            2,
-                            20
-                        ],
-                        "title": "BUTTON PERIOD TIME (MS)",
-                        "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "\"One CONFIG_BUTTON_DEBOUNCE_TICKS equal to CONFIG_BUTTON_PERIOD_TIME_MS\"",
-                        "id": "BUTTON_DEBOUNCE_TICKS",
-                        "name": "BUTTON_DEBOUNCE_TICKS",
-                        "range": [
-                            1,
-                            7
-                        ],
-                        "title": "BUTTON DEBOUNCE TICKS",
-                        "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": null,
-                        "id": "BUTTON_SHORT_PRESS_TIME_MS",
-                        "name": "BUTTON_SHORT_PRESS_TIME_MS",
-                        "range": [
-                            50,
-                            800
-                        ],
-                        "title": "BUTTON SHORT PRESS TIME (MS)",
-                        "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": null,
-                        "id": "BUTTON_LONG_PRESS_TIME_MS",
-                        "name": "BUTTON_LONG_PRESS_TIME_MS",
-                        "range": [
-                            500,
-                            5000
-                        ],
-                        "title": "BUTTON LONG PRESS TIME (MS)",
-                        "type": "int"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": null,
-                        "help": null,
-                        "id": "BUTTON_LONG_PRESS_TOLERANCE_MS",
-                        "name": "BUTTON_LONG_PRESS_TOLERANCE_MS",
+                        "help": "Error check assert the application before returning the error code.",
+                        "id": "BSP_ERROR_CHECK",
+                        "name": "BSP_ERROR_CHECK",
                         "range": null,
-                        "title": "BUTTON LONG PRESS TOLERANCE TIME (MS)",
-                        "type": "int"
+                        "title": "Enable error check in BSP",
+                        "type": "bool"
                     },
                     {
-                        "children": [],
-                        "depends_on": null,
-                        "help": "\"Serial trigger interval\"",
-                        "id": "BUTTON_SERIAL_TIME_MS",
-                        "name": "BUTTON_SERIAL_TIME_MS",
-                        "range": [
-                            2,
-                            1000
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "ESP32-S2 has two I2C peripherals, pick the one you want to use.",
+                                "id": "BSP_I2C_NUM",
+                                "name": "BSP_I2C_NUM",
+                                "range": [
+                                    0,
+                                    1
+                                ],
+                                "title": "I2C peripheral index",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "I2C has two speed modes: normal (100kHz) and fast (400kHz).",
+                                "id": "BSP_I2C_FAST_MODE",
+                                "name": "BSP_I2C_FAST_MODE",
+                                "range": null,
+                                "title": "Enable I2C fast mode",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": null,
+                                "id": "BSP_I2C_CLK_SPEED_HZ",
+                                "name": "BSP_I2C_CLK_SPEED_HZ",
+                                "range": null,
+                                "title": null,
+                                "type": "int"
+                            }
                         ],
-                        "title": "BUTTON SERIAL TIME (MS)",
-                        "type": "int"
+                        "depends_on": null,
+                        "id": "component-config-board-support-package-i2c",
+                        "title": "I2C",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Format SPIFFS if it fails to mount the filesystem.",
+                                "id": "BSP_SPIFFS_FORMAT_ON_MOUNT_FAIL",
+                                "name": "BSP_SPIFFS_FORMAT_ON_MOUNT_FAIL",
+                                "range": null,
+                                "title": "Format SPIFFS if mounting fails",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Mount point of SPIFFS in the Virtual File System.",
+                                "id": "BSP_SPIFFS_MOUNT_POINT",
+                                "name": "BSP_SPIFFS_MOUNT_POINT",
+                                "range": null,
+                                "title": "SPIFFS mount point",
+                                "type": "string"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Partition label which stores SPIFFS.",
+                                "id": "BSP_SPIFFS_PARTITION_LABEL",
+                                "name": "BSP_SPIFFS_PARTITION_LABEL",
+                                "range": null,
+                                "title": "Partition label of SPIFFS",
+                                "type": "string"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Supported max files for SPIFFS in the Virtual File System.",
+                                "id": "BSP_SPIFFS_MAX_FILES",
+                                "name": "BSP_SPIFFS_MAX_FILES",
+                                "range": null,
+                                "title": "Maximum files that could be open at the same time",
+                                "type": "int"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-board-support-package-spiffs-virtual-file-system",
+                        "title": "SPIFFS - Virtual File System",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "The SDMMC host will format (FAT) the uSD card if it fails to mount the filesystem.",
+                                "id": "BSP_SD_FORMAT_ON_MOUNT_FAIL",
+                                "name": "BSP_SD_FORMAT_ON_MOUNT_FAIL",
+                                "range": null,
+                                "title": "Format uSD card if mounting fails",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Mount point of the uSD card in the Virtual File System",
+                                "id": "BSP_SD_MOUNT_POINT",
+                                "name": "BSP_SD_MOUNT_POINT",
+                                "range": null,
+                                "title": "uSD card mount point",
+                                "type": "string"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-board-support-package-usd-card-virtual-file-system",
+                        "title": "uSD card - Virtual File System",
+                        "type": "menu"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "The Board Support Package will create a task that will periodically handle LVGL operation in lv_timer_handler().",
+                                "id": "BSP_DISPLAY_LVGL_TASK_PRIORITY",
+                                "name": "BSP_DISPLAY_LVGL_TASK_PRIORITY",
+                                "range": null,
+                                "title": "LVGL task priority",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Period of LVGL tick timer.",
+                                "id": "BSP_DISPLAY_LVGL_TICK",
+                                "name": "BSP_DISPLAY_LVGL_TICK",
+                                "range": [
+                                    1,
+                                    100
+                                ],
+                                "title": "LVGL tick period",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "Maximum time for task sleep in ms.",
+                                "id": "BSP_DISPLAY_LVGL_MAX_SLEEP",
+                                "name": "BSP_DISPLAY_LVGL_MAX_SLEEP",
+                                "range": [
+                                    1,
+                                    500
+                                ],
+                                "title": "LVGL maximum sleep time in ms",
+                                "type": "int"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": null,
+                                "help": "LEDC channel is used to generate PWM signal that controls display brightness.\nSet LEDC index that should be used.",
+                                "id": "BSP_DISPLAY_BRIGHTNESS_LEDC_CH",
+                                "name": "BSP_DISPLAY_BRIGHTNESS_LEDC_CH",
+                                "range": [
+                                    0,
+                                    7
+                                ],
+                                "title": "LEDC channel index",
+                                "type": "int"
+                            }
+                        ],
+                        "depends_on": null,
+                        "id": "component-config-board-support-package-display",
+                        "title": "Display",
+                        "type": "menu"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "Enable GPIO button power save\n\nThe function enables the use of GPIO buttons during light sleep,\nbut enabling this function prevents the simultaneous use of other\ntypes of buttons.",
-                        "id": "GPIO_BUTTON_SUPPORT_POWER_SAVE",
-                        "name": "GPIO_BUTTON_SUPPORT_POWER_SAVE",
+                        "help": "ESP32S3 has two I2S peripherals, pick the one you want to use.",
+                        "id": "BSP_I2S_NUM",
+                        "name": "BSP_I2S_NUM",
+                        "range": [
+                            0,
+                            1
+                        ],
+                        "title": "I2S peripheral index",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-board-support-package",
+                "title": "Board Support Package",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec ES8311.",
+                        "id": "CODEC_ES8311_SUPPORT",
+                        "name": "CODEC_ES8311_SUPPORT",
                         "range": null,
-                        "title": "GPIO BUTTON SUPPORT POWER SAVE",
+                        "title": "Support ES8311 Codec Chip",
                         "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "\"Maximum number of channels for ADC buttons\"",
-                        "id": "ADC_BUTTON_MAX_CHANNEL",
-                        "name": "ADC_BUTTON_MAX_CHANNEL",
-                        "range": [
-                            1,
-                            5
-                        ],
-                        "title": "ADC BUTTON MAX CHANNEL",
-                        "type": "int"
+                        "help": "Enable this option to support codec ES7210.",
+                        "id": "CODEC_ES7210_SUPPORT",
+                        "name": "CODEC_ES7210_SUPPORT",
+                        "range": null,
+                        "title": "Support ES7210 Codec Chip",
+                        "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "\"Maximum number of buttons per channel\"",
-                        "id": "ADC_BUTTON_MAX_BUTTON_PER_CHANNEL",
-                        "name": "ADC_BUTTON_MAX_BUTTON_PER_CHANNEL",
-                        "range": [
-                            1,
-                            10
-                        ],
-                        "title": "ADC BUTTON MAX BUTTON PER CHANNEL",
-                        "type": "int"
+                        "help": "Enable this option to support codec ES7243.",
+                        "id": "CODEC_ES7243_SUPPORT",
+                        "name": "CODEC_ES7243_SUPPORT",
+                        "range": null,
+                        "title": "Support ES7243 Codec Chip",
+                        "type": "bool"
                     },
                     {
                         "children": [],
                         "depends_on": null,
-                        "help": "\"Number of samples per scan\"",
-                        "id": "ADC_BUTTON_SAMPLE_TIMES",
-                        "name": "ADC_BUTTON_SAMPLE_TIMES",
-                        "range": [
-                            1,
-                            4
-                        ],
-                        "title": "ADC BUTTON SAMPLE TIMES",
-                        "type": "int"
+                        "help": "Enable this option to support codec ES7243E.",
+                        "id": "CODEC_ES7243E_SUPPORT",
+                        "name": "CODEC_ES7243E_SUPPORT",
+                        "range": null,
+                        "title": "Support ES7243E Codec Chip",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec ES8156.",
+                        "id": "CODEC_ES8156_SUPPORT",
+                        "name": "CODEC_ES8156_SUPPORT",
+                        "range": null,
+                        "title": "Support ES8156 Codec Chip",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec AW88298.",
+                        "id": "CODEC_AW88298_SUPPORT",
+                        "name": "CODEC_AW88298_SUPPORT",
+                        "range": null,
+                        "title": "Support AW88298 Codec Chip",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec ES8374.",
+                        "id": "CODEC_ES8374_SUPPORT",
+                        "name": "CODEC_ES8374_SUPPORT",
+                        "range": null,
+                        "title": "Support ES8374 Codec Chip",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec ES8388.",
+                        "id": "CODEC_ES8388_SUPPORT",
+                        "name": "CODEC_ES8388_SUPPORT",
+                        "range": null,
+                        "title": "Support ES8388 Codec Chip",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec TAS5805M.",
+                        "id": "CODEC_TAS5805M_SUPPORT",
+                        "name": "CODEC_TAS5805M_SUPPORT",
+                        "range": null,
+                        "title": "Support TAS5805M Codec Chip",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option to support codec ZL38063.\nZL38063 firmware only support xtensa, don't enable for RISC-V IC.",
+                        "id": "CODEC_ZL38063_SUPPORT",
+                        "name": "CODEC_ZL38063_SUPPORT",
+                        "range": null,
+                        "title": "Support ZL38063 Codec Chip",
+                        "type": "bool"
                     }
                 ],
                 "depends_on": null,
-                "id": "component-config-iot-button",
-                "title": "IoT Button",
+                "id": "component-config-audio-codec-device-configuration",
+                "title": "Audio Codec Device Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the OV7670.\nDisable this option to save memory.",
+                        "id": "OV7670_SUPPORT",
+                        "name": "OV7670_SUPPORT",
+                        "range": null,
+                        "title": "Support OV7670 VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the OV7725.\nDisable this option to save memory.",
+                        "id": "OV7725_SUPPORT",
+                        "name": "OV7725_SUPPORT",
+                        "range": null,
+                        "title": "Support OV7725 VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the NT99141.\nDisable this option to save memory.",
+                        "id": "NT99141_SUPPORT",
+                        "name": "NT99141_SUPPORT",
+                        "range": null,
+                        "title": "Support NT99141 HD",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the OV2640.\nDisable this option to save memory.",
+                        "id": "OV2640_SUPPORT",
+                        "name": "OV2640_SUPPORT",
+                        "range": null,
+                        "title": "Support OV2640 2MP",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the OV3360.\nDisable this option to save memory.",
+                        "id": "OV3660_SUPPORT",
+                        "name": "OV3660_SUPPORT",
+                        "range": null,
+                        "title": "Support OV3660 3MP",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the OV5640.\nDisable this option to save memory.",
+                        "id": "OV5640_SUPPORT",
+                        "name": "OV5640_SUPPORT",
+                        "range": null,
+                        "title": "Support OV5640 5MP",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the GC2145.\nDisable this option to save memory.",
+                        "id": "GC2145_SUPPORT",
+                        "name": "GC2145_SUPPORT",
+                        "range": null,
+                        "title": "Support GC2145 2MP",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the GC032A.\nDisable this option to save memory.",
+                        "id": "GC032A_SUPPORT",
+                        "name": "GC032A_SUPPORT",
+                        "range": null,
+                        "title": "Support GC032A VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the GC0308.\nDisable this option to save memory.",
+                        "id": "GC0308_SUPPORT",
+                        "name": "GC0308_SUPPORT",
+                        "range": null,
+                        "title": "Support GC0308 VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the BF3005.\nDisable this option to save memory.",
+                        "id": "BF3005_SUPPORT",
+                        "name": "BF3005_SUPPORT",
+                        "range": null,
+                        "title": "Support BF3005(BYD3005) VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the BF20A6.\nDisable this option to save memory.",
+                        "id": "BF20A6_SUPPORT",
+                        "name": "BF20A6_SUPPORT",
+                        "range": null,
+                        "title": "Support BF20A6(BYD20A6) VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice SC101_REGS_SELECT>",
+                                        "help": "Select this option means that when xclk is 20M, the frame rate is 15fps at 720p resolution.",
+                                        "id": "SC101IOT_720P_15FPS_ENABLED",
+                                        "name": "SC101IOT_720P_15FPS_ENABLED",
+                                        "range": null,
+                                        "title": "xclk20M_720p_15fps",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice SC101_REGS_SELECT>",
+                                        "help": "Select this option means that when xclk is 20M, the frame rate is 25fps at VGA resolution.",
+                                        "id": "SC101IOT_VGA_25FPS_ENABLED",
+                                        "name": "SC101IOT_VGA_25FPS_ENABLED",
+                                        "range": null,
+                                        "title": "xclk20M_VGA_25fps",
+                                        "type": "bool"
+                                    }
+                                ],
+                                "depends_on": "SC101IOT_SUPPORT",
+                                "help": "Currently SC010iot has several register sets available.\nSelect the one that matches your needs.",
+                                "id": "component-config-camera-configuration-support-sc101iot-hd-sc101iot-default-regs",
+                                "name": "SC101_REGS_SELECT",
+                                "title": "SC101iot default regs",
+                                "type": "choice"
+                            }
+                        ],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the SC101IOT.\nDisable this option to save memory.",
+                        "id": "SC101IOT_SUPPORT",
+                        "name": "SC101IOT_SUPPORT",
+                        "range": null,
+                        "title": "Support SC101IOT HD",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if you want to use the SC030IOT.\nDisable this option to save memory.",
+                        "id": "SC030IOT_SUPPORT",
+                        "name": "SC030IOT_SUPPORT",
+                        "range": null,
+                        "title": "Support SC030IOT VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "SC031GS is a global shutter CMOS sensor with high frame rate and single-frame HDR.\nEnable this option if you want to use the SC031GS.\nDisable this option to save memory.",
+                        "id": "SC031GS_SUPPORT",
+                        "name": "SC031GS_SUPPORT",
+                        "range": null,
+                        "title": "Support SC031GS VGA",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "<choice SCCB_HARDWARE_I2C_PORT>",
+                                "help": null,
+                                "id": "SCCB_HARDWARE_I2C_PORT0",
+                                "name": "SCCB_HARDWARE_I2C_PORT0",
+                                "range": null,
+                                "title": "I2C0",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice SCCB_HARDWARE_I2C_PORT>",
+                                "help": null,
+                                "id": "SCCB_HARDWARE_I2C_PORT1",
+                                "name": "SCCB_HARDWARE_I2C_PORT1",
+                                "range": null,
+                                "title": "I2C1",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "component-config-camera-configuration-i2c-peripheral-to-use-for-sccb",
+                        "name": "SCCB_HARDWARE_I2C_PORT",
+                        "title": "I2C peripheral to use for SCCB",
+                        "type": "choice"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Increasing this value can reduce the initialization time of the sensor.\nPlease refer to the relevant instructions of the sensor to adjust the value.",
+                        "id": "SCCB_CLK_FREQ",
+                        "name": "SCCB_CLK_FREQ",
+                        "range": [
+                            100000,
+                            400000
+                        ],
+                        "title": "SCCB clk frequency",
+                        "type": "int"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "<choice GC_SENSOR_WINDOW_MODE>",
+                                "help": null,
+                                "id": "GC_SENSOR_WINDOWING_MODE",
+                                "name": "GC_SENSOR_WINDOWING_MODE",
+                                "range": null,
+                                "title": "Windowing Mode",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice GC_SENSOR_WINDOW_MODE>",
+                                "help": null,
+                                "id": "GC_SENSOR_SUBSAMPLE_MODE",
+                                "name": "GC_SENSOR_SUBSAMPLE_MODE",
+                                "range": null,
+                                "title": "Subsample Mode",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "GC2145_SUPPORT || GC032A_SUPPORT || GC0308_SUPPORT",
+                        "help": "This option determines how to reduce the output size when the resolution you set is less than the maximum resolution.\nSUBSAMPLE_MODE has a bigger perspective and WINDOWING_MODE has a higher frame rate.",
+                        "id": "component-config-camera-configuration-galaxycore-sensor-window-mode",
+                        "name": "GC_SENSOR_WINDOW_MODE",
+                        "title": "GalaxyCore Sensor Window Mode",
+                        "type": "choice"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Camera task stack size",
+                        "id": "CAMERA_TASK_STACK_SIZE",
+                        "name": "CAMERA_TASK_STACK_SIZE",
+                        "range": null,
+                        "title": "CAM task stack size",
+                        "type": "int"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [],
+                                "depends_on": "<choice CAMERA_TASK_PINNED_TO_CORE>",
+                                "help": null,
+                                "id": "CAMERA_CORE0",
+                                "name": "CAMERA_CORE0",
+                                "range": null,
+                                "title": "CORE0",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice CAMERA_TASK_PINNED_TO_CORE>",
+                                "help": null,
+                                "id": "CAMERA_CORE1",
+                                "name": "CAMERA_CORE1",
+                                "range": null,
+                                "title": "CORE1",
+                                "type": "bool"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "<choice CAMERA_TASK_PINNED_TO_CORE>",
+                                "help": null,
+                                "id": "CAMERA_NO_AFFINITY",
+                                "name": "CAMERA_NO_AFFINITY",
+                                "range": null,
+                                "title": "NO_AFFINITY",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": null,
+                        "help": "Pin the camera handle task to a certain core(0/1). It can also be done automatically choosing NO_AFFINITY.",
+                        "id": "component-config-camera-configuration-camera-task-pinned-to-core",
+                        "name": "CAMERA_TASK_PINNED_TO_CORE",
+                        "title": "Camera task pinned to core",
+                        "type": "choice"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Maximum value of DMA buffer\nLarger values may fail to allocate due to insufficient contiguous memory blocks, and smaller value may cause DMA interrupt to be too frequent.",
+                        "id": "CAMERA_DMA_BUFFER_SIZE_MAX",
+                        "name": "CAMERA_DMA_BUFFER_SIZE_MAX",
+                        "range": [
+                            8192,
+                            32768
+                        ],
+                        "title": "DMA buffer size",
+                        "type": "int"
+                    },
+                    {
+                        "children": [
+                            {
+                                "children": [
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice CAMERA_CONV_PROTOCOL>",
+                                        "help": null,
+                                        "id": "LCD_CAM_CONV_BT601_ENABLED",
+                                        "name": "LCD_CAM_CONV_BT601_ENABLED",
+                                        "range": null,
+                                        "title": "BT601",
+                                        "type": "bool"
+                                    },
+                                    {
+                                        "children": [],
+                                        "depends_on": "<choice CAMERA_CONV_PROTOCOL>",
+                                        "help": null,
+                                        "id": "LCD_CAM_CONV_BT709_ENABLED",
+                                        "name": "LCD_CAM_CONV_BT709_ENABLED",
+                                        "range": null,
+                                        "title": "BT709",
+                                        "type": "bool"
+                                    }
+                                ],
+                                "depends_on": "CAMERA_CONVERTER_ENABLED",
+                                "help": "Supports format conversion under both BT601 and BT709 standards.",
+                                "id": "component-config-camera-configuration-enable-camera-rgb-yuv-converter-camera-converter-protocol",
+                                "name": "CAMERA_CONV_PROTOCOL",
+                                "title": "Camera converter protocol",
+                                "type": "choice"
+                            },
+                            {
+                                "children": [],
+                                "depends_on": "CAMERA_CONVERTER_ENABLED",
+                                "help": "Supports format conversion under both full color range mode and limited color range mode.\nIf full color range mode is selected, the color range of RGB or YUV is 0~255.\nIf limited color range mode is selected, the color range of RGB is 16~240, and the color range of YUV is Y[16~240], UV[16~235].\nFull color range mode has a wider color range, so details in the image show more clearly.\nPlease confirm the color range mode of the current camera sensor, incorrect color range mode may cause color difference in the final converted image.\nFull range mode is used by default. If this option is not selected, the format conversion function will be done using the limited range mode.",
+                                "id": "LCD_CAM_CONV_FULL_RANGE_ENABLED",
+                                "name": "LCD_CAM_CONV_FULL_RANGE_ENABLED",
+                                "range": null,
+                                "title": "Camera converter full range mode",
+                                "type": "bool"
+                            }
+                        ],
+                        "depends_on": "IDF_TARGET_ESP32S3",
+                        "help": "Enable this option if you want to use RGB565/YUV422/YUV420/YUV411 format conversion.",
+                        "id": "CAMERA_CONVERTER_ENABLED",
+                        "name": "CAMERA_CONVERTER_ENABLED",
+                        "range": null,
+                        "title": "Enable camera RGB/YUV converter",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3",
+                        "help": "If this option is enabled, camera ISR will execute from IRAM.",
+                        "id": "LCD_CAM_ISR_IRAM_SAFE",
+                        "name": "LCD_CAM_ISR_IRAM_SAFE",
+                        "range": null,
+                        "title": "Execute camera ISR from IRAM",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "component-config-camera-configuration",
+                "title": "Camera configuration",
                 "type": "menu"
             }
         ],

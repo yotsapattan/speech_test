@@ -9,9 +9,11 @@ idf_component_register(
          model.cc recognize_commands.cc command_responder.cc
          micro_features_generator.cc ringbuf.c
     PRIV_REQUIRES spi_flash driver esp_timer test_data
-    INCLUDE_DIRS "")
-
-    # Reduce the level of paranoia to be able to compile sources
+    INCLUDE_DIRS ".")
+                #  "managed_components/espressif__esp32_s3_eye/include")
+                #  "managed_components/espressif__esp_codec_dev/include")  # Include the esp_codec_dev path
+                 
+# Reduce the level of paranoia to be able to compile sources
 target_compile_options(${COMPONENT_LIB} PRIVATE
     -Wno-maybe-uninitialized
     -Wno-missing-field-initializers

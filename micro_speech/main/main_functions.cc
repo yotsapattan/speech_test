@@ -21,7 +21,7 @@ limitations under the License.
 
 #include "audio_provider.h"
 #include "command_responder.h"
-#include "main/feature_provider.h"
+#include "feature_provider.h"
 #include "micro_model_settings.h"
 #include "model.h"
 #include "recognize_commands.h"

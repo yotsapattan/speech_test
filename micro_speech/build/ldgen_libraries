@@ -63,10 +63,10 @@
 /Users/dome/esp/micro_speech/build/esp-idf/test_data/libtest_data.a
 /Users/dome/esp/micro_speech/build/esp-idf/espressif__esp-nn/libespressif__esp-nn.a
 /Users/dome/esp/micro_speech/build/esp-idf/espressif__esp-tflite-micro/libespressif__esp-tflite-micro.a
+/Users/dome/esp/micro_speech/build/esp-idf/main/libmain.a
 /Users/dome/esp/micro_speech/build/esp-idf/espressif__button/libespressif__button.a
-/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32-camera/libespressif__esp32-camera.a
-/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp_codec_dev/libespressif__esp_codec_dev.a
 /Users/dome/esp/micro_speech/build/esp-idf/lvgl__lvgl/liblvgl__lvgl.a
 /Users/dome/esp/micro_speech/build/esp-idf/espressif__esp_lvgl_port/libespressif__esp_lvgl_port.a
+/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32-camera/libespressif__esp32-camera.a
+/Users/dome/esp/micro_speech/build/esp-idf/espressif__esp_codec_dev/libespressif__esp_codec_dev.a
 /Users/dome/esp/micro_speech/build/esp-idf/espressif__esp32_s3_eye/libespressif__esp32_s3_eye.a
-/Users/dome/esp/micro_speech/build/esp-idf/main/libmain.a
