@@ -32,8 +32,8 @@ limitations under the License.
 #include "tensorflow/lite/micro/micro_log.h"
 #include "tensorflow/lite/micro/micro_mutable_op_resolver.h"
 
-#include "bsp/esp32_s3_eye.h"
 #include "lvgl.h"
+#include "bsp/esp32_s3_eye.h"
 #include "esp_lvgl_port.h"
 
 // Forward declaration of setup_style function

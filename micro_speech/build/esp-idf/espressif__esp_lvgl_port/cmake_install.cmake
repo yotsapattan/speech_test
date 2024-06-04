@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dome/esp/micro_speech/managed_components/espressif__esp_lvgl_port
+# Install script for directory: /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

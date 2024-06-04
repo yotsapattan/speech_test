@@ -1,0 +1,86 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x2a (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40056f6f
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x16f4
+load:0x403c9700,len:0xbf4
+load:0x403cc700,len:0x2cf0
+entry 0x403c9904
+[0;32mI (24) boot: ESP-IDF v5.0.6 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time 07:30:49[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.1[0m
+[0;32mI (30) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (54) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=1e8c8h (125128) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0002e8f0 vaddr=3fc93800 size=01728h (  5928) load[0m
+[0;32mI (120) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=7b31ch (504604) map[0m
+[0;32mI (215) esp_image: segment 3: paddr=000ab344 vaddr=3fc94f28 size=00f38h (  3896) load[0m
+[0;32mI (216) esp_image: segment 4: paddr=000ac284 vaddr=40374000 size=0f768h ( 63336) load[0m
+[0;32mI (241) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (241) boot: Disabling RNG early entropy source...[0m
+[0;32mI (253) cpu_start: Multicore app[0m
+[0;32mI (253) cpu_start: Pro cpu up.[0m
+[0;32mI (253) cpu_start: Starting app cpu, entry point is 0x4037536c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (271) cpu_start: Pro cpu start user code[0m
+[0;32mI (271) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (271) cpu_start: Application information:[0m
+[0;32mI (274) cpu_start: Project name:     micro_speech[0m
+[0;32mI (279) cpu_start: App version:      2579bf8-dirty[0m
+[0;32mI (285) cpu_start: Compile time:     Jun  4 2024 07:30:40[0m
+[0;32mI (291) cpu_start: ELF file SHA256:  ba7e96b731147d36...[0m
+[0;32mI (297) cpu_start: ESP-IDF:          v5.0.6[0m
+[0;32mI (302) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (306) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (311) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (316) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FCB4BF0 len 00034B20 (210 KiB): DRAM[0m
+[0;32mI (329) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (336) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (342) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (350) spi_flash: detected chip: generic[0m
+[0;32mI (353) spi_flash: flash io: dio[0m
+[0;32mI (358) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (364) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (371) app_start: Starting scheduler on CPU0[0m
+[0;32mI (376) app_start: Starting scheduler on CPU1[0m
+[0;32mI (376) main_task: Started on CPU0[0m
+[0;32mI (386) main_task: Calling app_main()[0m
+[0;32mI (396) gpio: GPIO[43]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (396) LVGL: Starting LVGL task[0m
+[0;32mI (516) S3-EYE: Setting LCD backlight: 100%[0m
+[0;32mI (536) feature_provider: InitializeMicroFeatures successful[0m
+[0;32mI (596) TF_LITE_AUDIO_PROVIDER: Audio Recording started[0m
+[0;31mE (5386) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (5386) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (5386) task_wdt: Tasks currently running:[0m
+[0;31mE (5386) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (5386) task_wdt: CPU 1: LVGL task[0m
+[0;31mE (5386) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40379B22:0x3FC94DD0 0x403772AD:0x3FC94DF0 0x400559DD:0x3FCB8590 0x4037B63B:0x3FCB85A0 0x40379B6E:0x3FCB85C0 0x40379B95:0x3FCB85E0 0x4037DC08:0x3FCB8600 0x4202E52A:0x3FCB8620 0x4037B341:0x3FCB8640
+
+Heard unknown (0.8164) @7700ms
+[0;31mE (10386) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (10386) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (10386) task_wdt: Tasks currently running:[0m
+[0;31mE (10386) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (10386) task_wdt: CPU 1: LVGL task[0m
+[0;31mE (10386) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40379B22:0x3FC94DD0 0x403772AD:0x3FC94DF0 0x400559DD:0x3FCB8570 0x4037B63B:0x3FCB8580 0x4037C674:0x3FCB85A0 0x4037C798:0x3FCB85E0 0x4202E495:0x3FCB8600 0x4202E4F3:0x3FCB8620 0x4037B341:0x3FCB8640
+
+Heard unknown (0.8047) @10550ms

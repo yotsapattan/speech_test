@@ -1,4 +1,4 @@
-/* * Data converted from /Users/dome/esp/micro_speech/test_data/no_30ms.wav
+/* * Data converted from /Users/dome/esp/speech_test/micro_speech/test_data/no_30ms.wav
  */
 .data
 .section .rodata.embedded

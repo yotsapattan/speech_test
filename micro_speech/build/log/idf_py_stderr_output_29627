@@ -1,0 +1,53 @@
+[0;33m--- idf_monitor on /dev/cu.usbmodem101 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4037536c: call_start_cpu1 at /Users/dome/esp/esp-idf/components/esp_system/port/cpu_start.c:147
+[0m
+[0;33m0x40379b22: esp_crosscore_isr at /Users/dome/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x403772ad: _xt_lowint1 at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1122
+[0m
+[0;33m0x4037d8b2: vPortClearInterruptMaskFromISR at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:566
+ (inlined by) xTaskGetCurrentTaskHandle at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4931
+[0m
+[0;33m0x4037c77f: xQueueTakeMutexRecursive at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:731
+[0m
+[0;33m0x4202e309: lvgl_port_lock at /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:661 (discriminator 4)
+[0m
+[0;33m0x4202e367: lvgl_port_task at /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:690
+[0m
+[0;33m0x4037b341: vPortTaskWrapper at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0;33m0x40379b22: esp_crosscore_isr at /Users/dome/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x403772ad: _xt_lowint1 at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1122
+[0m
+[0;33m0x4037b63b: vPortClearInterruptMaskFromISR at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:566
+ (inlined by) vPortExitCritical at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:337
+[0m
+[0;33m0x4037c0e7: xQueueGenericSend at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:953
+[0m
+[0;33m0x4037c23a: xQueueGiveMutexRecursive at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:692
+[0m
+[0;33m0x4202e337: lvgl_port_unlock at /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:667
+[0m
+[0;33m0x4202e371: lvgl_port_task at /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:692
+[0m
+[0;33m0x4037b341: vPortTaskWrapper at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0;33m0x40379b22: esp_crosscore_isr at /Users/dome/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x403772ad: _xt_lowint1 at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1122
+[0m
+[0;33m0x4202e39e: lvgl_port_task at /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:699
+[0m
+[0;33m0x4037b341: vPortTaskWrapper at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0;33m0x40379b22: esp_crosscore_isr at /Users/dome/esp/esp-idf/components/esp_system/crosscore_int.c:96
+[0m
+[0;33m0x403772ad: _xt_lowint1 at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1122
+[0m
+[0;33m0x4202e39e: lvgl_port_task at /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp_lvgl_port/esp_lvgl_port.c:699
+[0m
+[0;33m0x4037b341: vPortTaskWrapper at /Users/dome/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:149
+[0m
+[0m

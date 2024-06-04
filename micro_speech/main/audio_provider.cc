@@ -31,7 +31,7 @@ limitations under the License.
 #include "freertos/task.h"
 #include "ringbuf.h"
 #include "micro_model_settings.h"
-#include "/Users/dome/esp/micro_speech/managed_components/espressif__esp32_s3_eye/include/bsp/esp32_s3_eye.h"
+#include "bsp/esp32_s3_eye.h"
 
 using namespace std;
 

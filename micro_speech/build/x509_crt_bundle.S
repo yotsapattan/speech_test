@@ -1,4 +1,4 @@
-/* * Data converted from /Users/dome/esp/micro_speech/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/dome/esp/speech_test/micro_speech/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

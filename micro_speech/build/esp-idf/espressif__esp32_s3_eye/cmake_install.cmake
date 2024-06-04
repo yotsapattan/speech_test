@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dome/esp/micro_speech/managed_components/espressif__esp32_s3_eye
+# Install script for directory: /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__esp32_s3_eye
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

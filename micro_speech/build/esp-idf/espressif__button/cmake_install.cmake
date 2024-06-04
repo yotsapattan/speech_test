@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dome/esp/micro_speech/managed_components/espressif__button
+# Install script for directory: /Users/dome/esp/speech_test/micro_speech/managed_components/espressif__button
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

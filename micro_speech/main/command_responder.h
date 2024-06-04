@@ -19,6 +19,8 @@ limitations under the License.
 #define TENSORFLOW_LITE_MICRO_EXAMPLES_MICRO_SPEECH_COMMAND_RESPONDER_H_
 
 #include "tensorflow/lite/c/common.h"
+#include <cstdint>
+#include "lvgl.h"
 
 // Called every time the results of an audio recognition run are available. The
 // human-readable name of any recognized command is in the `found_command`
@@ -26,5 +28,7 @@ limitations under the License.
 // if the previous command was different to this one.
 void RespondToCommand(int32_t current_time, const char* found_command,
                       float score, bool is_new_command);
-void setup_styles()
+
+void setup_styles();
+
 #endif  // TENSORFLOW_LITE_MICRO_EXAMPLES_MICRO_SPEECH_COMMAND_RESPONDER_H_

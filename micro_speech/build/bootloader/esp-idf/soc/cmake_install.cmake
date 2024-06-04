@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/dome/esp/micro_speech/build/bootloader/esp-idf/soc/esp32s3/cmake_install.cmake")
+  include("/Users/dome/esp/speech_test/micro_speech/build/bootloader/esp-idf/soc/esp32s3/cmake_install.cmake")
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/dome/esp/micro_speech/main
+# Install script for directory: /Users/dome/esp/speech_test/micro_speech/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
